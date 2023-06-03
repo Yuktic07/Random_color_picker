@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Random Color Picker</title>
+    
+        <style>
+            *{font-size: 40px; font-family: 'Times New Roman';}
+        </style>
+
+        <script>
+            function cc(){
+                event.preventDefault();
+                let msg = document.getElementById("msg");
+                let colors = ["Aquamarine", "CornflowerBlue", "blueViolet","Crimson", "DeepPink", "Orange", "Yellow",'aqua', 'blue', 'fuchsia', 'gray', 'green', 
+                'lime', 'maroon', 'navy', 'olive', 'orange', 'purple', 'red', 'silver', 'teal', 'yellow'];
+                let r = parseInt(Math.random() * colors.length);
+                document.body.style.backgroundColor=colors[r];
+                let ans = "Color : " + colors[r];
+                msg.innerHTML=ans;
+            }
+        </script>
+    
+    </head>
+
+    <body>
+        <center>
+            <h1>Random Color Picker</h1>
+            <form onsubmit="cc()">
+                <input type="submit" value="Pick a color"/>
+            </form>
+            <h1 id = msg ></h1>
+        </center>
+    </body>
+</html>
